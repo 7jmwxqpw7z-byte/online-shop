@@ -1,0 +1,1 @@
+export { StorefrontPrimaryNavigationPage } from './storefront-primary-navigation-page';
