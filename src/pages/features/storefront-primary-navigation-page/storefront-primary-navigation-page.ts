@@ -32,4 +32,13 @@ export class StorefrontPrimaryNavigationPage {
     async navigateToWishlistPage(): Promise<void> {
         await this.locator.locator(`//div[@class='primary-navigation']//a[text()='Lista życzeń']`).click();
     }
+
+    async verifyPrimaryNavigationVisible(): Promise<void> {
+        await expect(this.locator).toBeVisible();
+    }
+
+    async useFastSearch(query: string): Promise<void> {
+        await this.locator.locator(`//input[@type='search']`).fill(query);
+        await this.locator.press('Enter');
+    }
 }

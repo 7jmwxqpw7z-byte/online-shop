@@ -12,11 +12,14 @@ test('User Registration', async ({ page }) => {
         await storefrontPrimaryNavigationPage.navigateToMyAccountPage();
   });
 
+
     test.step('Register a new user', async () => {
         
         const myAccountPage = MyAccountPage.of(page.locator(`//div[@id='primary']`));
 
-        await myAccountPage.fillRegistrationForm('test@inbox.com', 'VeryStrongPassword@123');
+        await myAccountPage.fillRegistrationForm('mr.test@inbox.com', 'VeryStrongPassword@123');
+        await myAccountPage.verifyRegistrationSuccess('mr.test');
+
     });
 
 });

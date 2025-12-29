@@ -1,0 +1,1 @@
+import {ShopPage} from './shop-page';
